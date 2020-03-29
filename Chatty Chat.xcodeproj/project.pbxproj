@@ -154,6 +154,7 @@
 				C556A5F3242C3BBE006EFFF3 /* Frameworks */,
 				C556A5F4242C3BBE006EFFF3 /* Resources */,
 				C54422C1248B7B15D5E04AB3 /* [CP] Embed Pods Frameworks */,
+				E176E5BC1A21466531795AEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +229,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E176E5BC1A21466531795AEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3AEA5E53D573B3B3E477DCB /* [CP] Check Pods Manifest.lock */ = {

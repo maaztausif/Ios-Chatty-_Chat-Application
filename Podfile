@@ -11,6 +11,11 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
+#pod 'FBSDKLoginKit'
+#pod 'GoogleSignIn'
+pod 'GoogleSignIn', '~> 4.1.1'
+
+
 
 end
 post_install do |installer|

@@ -210,6 +210,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nqE-zM-dqD"/>
                     <connections>
+                        <outlet property="ButtonReg" destination="uTI-7H-vdQ" id="VU2-SW-uXb"/>
+                        <outlet property="txt_Email" destination="5gM-AX-v4K" id="O7q-pw-GUb"/>
+                        <outlet property="txt_Password" destination="iER-sT-R3N" id="0KZ-8N-zri"/>
                         <segue destination="VZS-et-yyj" kind="show" identifier="goToChat" id="lQI-Gc-662"/>
                     </connections>
                 </viewController>
@@ -312,6 +315,6 @@
         <image name="background1" width="1800" height="1192.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1kp-qK-EnM"/>
+        <segue reference="lQI-Gc-662"/>
     </inferredMetricsTieBreakers>
 </document>
