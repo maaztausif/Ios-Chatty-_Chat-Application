@@ -70,10 +70,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="SSK-gJ-aB8"/>
+                    <connections>
+                        <segue destination="VZS-et-yyj" kind="show" identifier="goToMain" id="obv-Dz-XIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192.75362318840581" y="-246.42857142857142"/>
+            <point key="canvasLocation" x="-425" y="-192"/>
         </scene>
         <!--Login-->
         <scene sceneID="Uge-5b-ipF">
@@ -145,6 +148,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="75A-L0-n8w"/>
                     <connections>
+                        <outlet property="txt_Email" destination="f3G-yD-NEb" id="VWZ-uL-rbc"/>
+                        <outlet property="txt_Password" destination="Mp2-CF-LaX" id="7Ds-0D-4kb"/>
                         <segue destination="VZS-et-yyj" kind="show" identifier="goToChat" id="1kp-qK-EnM"/>
                     </connections>
                 </viewController>
@@ -285,12 +290,16 @@
                         <viewLayoutGuide key="safeArea" id="LTe-4k-3T8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chatty Chat" id="Clj-Pp-hfv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="AEt-YG-k8z"/>
+                        <barButtonItem key="rightBarButtonItem" title="SignOut" id="AEt-YG-k8z">
+                            <connections>
+                                <action selector="signOutButton:" destination="VZS-et-yyj" id="fan-ju-rDD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ji-v2-7lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128.985507246377" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="2117" y="-246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Y4-TK-s4b">
@@ -316,6 +325,6 @@
         <image name="background1" width="1800" height="1192.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lQI-Gc-662"/>
+        <segue reference="1kp-qK-EnM"/>
     </inferredMetricsTieBreakers>
 </document>

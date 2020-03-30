@@ -28,6 +28,15 @@ class RegisterViewController: UIViewController ,GIDSignInUIDelegate{
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
+        
+    }
+    
+    
     @IBAction func registerButton(_ sender: Any) {
         SVProgressHUD.show()
 // For email and pw empty field
@@ -79,7 +88,25 @@ class RegisterViewController: UIViewController ,GIDSignInUIDelegate{
     
     }
     
-    
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//
+//        if let error = error{
+//            print("Google signIn error = =========================\(error)")
+//        }else{
+//            guard let authentication = user.authentication else {return }
+//            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//
+//            Auth.auth().signIn(with: credential) { (authResult, error) in
+//                if let error = error{
+//                    print("SignIn Error Firebase ==========================\(error)")
+//                }else{
+//                    print("Sign in with firebase Complete============================")
+//                       self.performSegue(withIdentifier: "goToChat", sender: self)
+//                }
+//            }
+//        }
+//
+//    }
     
     
     
@@ -95,4 +122,31 @@ class RegisterViewController: UIViewController ,GIDSignInUIDelegate{
     */
 
 
+}
+extension RegisterViewController : GIDSignInDelegate{
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error{
+            print("Google signIn error = =========================\(error)")
+        }else{
+            guard let authentication = user.authentication else {return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential) { (authResult, error) in
+                if let error = error{
+                    print("SignIn Error Firebase ==========================\(error)")
+                }else{
+                    print("Sign in with firebase Complete============================")
+                    self.performSegue(withIdentifier: "goToChat", sender: self)
+                    
+                }
+            }
+        }
+
+        
+    }
+    
+    
+    
+    
 }

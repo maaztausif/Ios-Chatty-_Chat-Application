@@ -13,7 +13,7 @@ import GoogleSignIn
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate ,GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
 
@@ -26,10 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,GIDSignInDelegate{
         
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+      //  GIDSignIn.sharedInstance().delegate = self
+        
+        
         let dataBase = Database.database().reference()
         dataBase.setValue(["hello","BOss"])
+        
+       // self.window?.rootViewController?.performSegue(withIdentifier: "goToChat", sender: self)
+
         return true
+    }
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+        -> Bool {
+            return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -122,28 +131,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,GIDSignInDelegate{
 //    }
     
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
-        if let error = error{
-            print("Google signIn error = =========================\(error)")
-        }else{
-            guard let authentication = user.authentication else {return }
-            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-            
-            Auth.auth().signIn(with: credential) { (authResult, error) in
-                if let error = error{
-                    print("SignIn Error Firebase ==========================\(error)")
-                }else{
-                    print("Sign in with firebase Complete============================")
-                }
-            }
-        }
-        
-    }
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//
+//        if let error = error{
+//            print("Google signIn error = =========================\(error)")
+//        }else{
+//            guard let authentication = user.authentication else {return }
+//            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//
+//            Auth.auth().signIn(with: credential) { (authResult, error) in
+//                if let error = error{
+//                    print("SignIn Error Firebase ==========================\(error)")
+//                }else{
+//                    print("Sign in with firebase Complete============================")
+//                    //self.window?.rootViewController?.performSegue(withIdentifier: "goToChat", sender: self)
+//                   // self.window?.rootViewController!.performSegue(withIdentifier:"goToChat", sender: nil)
+//                  //  self.window?.rootViewController?.performSegue(withIdentifier: "goToChat", sender: self)//
+//
+//                    guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else {return}
+//                    guard let controller = navController.viewControllers[0] as? ChatViewController else {return}
+//              //      controller.configureViewComponenets()
+//                    controller.performSegue(withIdentifier: "goToChat", sender: self)
+//                    //self.window?.rootViewController?.performSegue(withIdentifier: "goToChat", sender: self)
+//
+//
+//                //    controller.load
+//
+//
+//                }
+//            }
+//        }
+//
+//    }
     
 //    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
 //        -> Bool {
-//            return GIDSignIn.sharedInstance().handle(url, sourceApplication: <#String?#>)
+//            return GIDSignIn.sharedInstance().handle(url, sourceApplication: )
 //    }
     
     
