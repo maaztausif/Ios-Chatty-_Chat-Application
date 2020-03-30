@@ -9,10 +9,10 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import GoogleSignIn
 
 
-
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController ,GIDSignInUIDelegate{
     
     @IBOutlet weak var txt_Email: UITextField!
     @IBOutlet weak var txt_Password: UITextField!
@@ -21,6 +21,11 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let googleButton = GIDSignInButton()
+        googleButton.frame = CGRect(x: 26, y: 450, width: view.frame.width - 32, height: 350)
+        view.addSubview(googleButton)
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
     }
     
     @IBAction func registerButton(_ sender: Any) {

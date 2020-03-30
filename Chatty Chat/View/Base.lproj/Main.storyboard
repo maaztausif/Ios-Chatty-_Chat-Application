@@ -177,9 +177,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTI-7H-vdQ">
-                                <rect key="frame" x="41" y="375" width="341" height="45"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                <state key="normal" title="Register">
+                                <rect key="frame" x="41" y="375" width="341" height="36"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Register With Email">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -190,18 +191,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5gM-AX-v4K" firstAttribute="leading" secondItem="mJG-Xn-liC" secondAttribute="leading" constant="59" id="1md-WG-nOi"/>
-                            <constraint firstItem="uTI-7H-vdQ" firstAttribute="top" secondItem="wAB-lU-9bA" secondAttribute="topMargin" constant="287" id="1x0-2w-Kxe"/>
+                            <constraint firstItem="mJG-Xn-liC" firstAttribute="bottom" secondItem="uTI-7H-vdQ" secondAttribute="bottom" constant="451" id="B9I-zC-gqR"/>
                             <constraint firstItem="YcE-hP-4e9" firstAttribute="bottom" secondItem="mJG-Xn-liC" secondAttribute="bottom" id="GLy-qk-wxQ"/>
-                            <constraint firstItem="uTI-7H-vdQ" firstAttribute="leading" secondItem="mJG-Xn-liC" secondAttribute="leading" constant="41" id="MVc-XF-Dmo"/>
                             <constraint firstAttribute="bottom" secondItem="5gM-AX-v4K" secondAttribute="bottom" constant="671" id="QLZ-K6-V1X"/>
                             <constraint firstAttribute="bottomMargin" secondItem="iER-sT-R3N" secondAttribute="bottom" constant="559" id="RZ6-tL-R6J"/>
                             <constraint firstItem="YcE-hP-4e9" firstAttribute="leading" secondItem="mJG-Xn-liC" secondAttribute="leading" id="Unu-SO-gla"/>
                             <constraint firstItem="5gM-AX-v4K" firstAttribute="top" secondItem="mJG-Xn-liC" secondAttribute="top" constant="86" id="Vd1-w7-r6m"/>
                             <constraint firstItem="iER-sT-R3N" firstAttribute="leading" secondItem="mJG-Xn-liC" secondAttribute="leading" constant="59" id="a9K-nr-I5x"/>
-                            <constraint firstItem="mJG-Xn-liC" firstAttribute="trailing" secondItem="uTI-7H-vdQ" secondAttribute="trailing" constant="32" id="cc2-gD-9sb"/>
+                            <constraint firstItem="uTI-7H-vdQ" firstAttribute="top" secondItem="wAB-lU-9bA" secondAttribute="topMargin" constant="287" id="cSc-KR-Lfh"/>
+                            <constraint firstItem="mJG-Xn-liC" firstAttribute="trailing" secondItem="uTI-7H-vdQ" secondAttribute="trailing" constant="32" id="crQ-Hr-6Rc"/>
                             <constraint firstItem="mJG-Xn-liC" firstAttribute="trailing" secondItem="5gM-AX-v4K" secondAttribute="trailing" constant="51" id="hVA-gt-OEJ"/>
+                            <constraint firstItem="uTI-7H-vdQ" firstAttribute="leading" secondItem="mJG-Xn-liC" secondAttribute="leading" constant="41" id="n8w-N1-2JE"/>
                             <constraint firstItem="YcE-hP-4e9" firstAttribute="top" secondItem="mJG-Xn-liC" secondAttribute="top" id="o2z-SN-iZM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="uTI-7H-vdQ" secondAttribute="bottom" constant="442" id="r5Z-Fw-NPb"/>
                             <constraint firstItem="YcE-hP-4e9" firstAttribute="trailing" secondItem="mJG-Xn-liC" secondAttribute="trailing" id="tfe-cg-dYs"/>
                             <constraint firstItem="iER-sT-R3N" firstAttribute="top" secondItem="wAB-lU-9bA" secondAttribute="topMargin" constant="165" id="tki-ta-33T"/>
                             <constraint firstItem="mJG-Xn-liC" firstAttribute="trailing" secondItem="iER-sT-R3N" secondAttribute="trailing" constant="51" id="xgg-6y-esq"/>

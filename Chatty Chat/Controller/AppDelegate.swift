@@ -9,10 +9,14 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleSignIn
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate ,GIDSignInDelegate{
+    
+
+
 
     var window: UIWindow?
 
@@ -21,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         let dataBase = Database.database().reference()
         dataBase.setValue(["hello","BOss"])
         return true
@@ -101,6 +107,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FirebaseApp.configure()
 //        return true
 //    }
-
+//
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        guard let authentication = user.authentication else {return }
+//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//
+//        Auth.auth().signIn(with: credential) { (authResult, error) in
+//            if let error = error{
+//                print("SignIn Error Firebase ==========================\(error)")
+//            }else{
+//                print("Sign in with firebase Complete============================")
+//            }
+//        }
+//    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error{
+            print("Google signIn error = =========================\(error)")
+        }else{
+            guard let authentication = user.authentication else {return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential) { (authResult, error) in
+                if let error = error{
+                    print("SignIn Error Firebase ==========================\(error)")
+                }else{
+                    print("Sign in with firebase Complete============================")
+                }
+            }
+        }
+        
+    }
+    
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+//        -> Bool {
+//            return GIDSignIn.sharedInstance().handle(url, sourceApplication: <#String?#>)
+//    }
+    
+    
+    
 }
+
 

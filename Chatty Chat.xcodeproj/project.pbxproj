@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -68,7 +68,6 @@
 				277161CC26EDB72B650307F4 /* Pods-Chatty Chat.debug.xcconfig */,
 				AB40A1A227E501E2C4EE0DE3 /* Pods-Chatty Chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
