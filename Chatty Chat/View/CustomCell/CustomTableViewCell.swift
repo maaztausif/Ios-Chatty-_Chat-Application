@@ -2,20 +2,18 @@
 //  CustomTableViewCell.swift
 //  Chatty Chat
 //
-//  Created by Maaz Bin Tausif on 27/03/2020.
+//  Created by Maaz Bin Tausif on 01/04/2020.
 //  Copyright © 2020 Maaz Bin Tausif. All rights reserved.
 //
 
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var AvatarImageView: UIImageView!
-    @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var MessageBackground: UIView!
+    @IBOutlet weak var SenderUserName: UILabel!
     @IBOutlet weak var messageBody: UILabel!
-    @IBOutlet weak var senderName: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

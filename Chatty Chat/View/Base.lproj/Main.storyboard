@@ -248,6 +248,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendButton:" destination="VZS-et-yyj" eventType="touchUpInside" id="yrg-Pn-2sI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.40938714380000002" blue="0.088390720290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,6 +299,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonSend" destination="y1H-zR-VTp" id="WtR-ze-Dcy"/>
+                        <outlet property="messageTableView" destination="KGS-Ec-QrQ" id="IJR-oU-FLT"/>
+                        <outlet property="txt_Msg" destination="xv8-Ef-MTf" id="ddB-vw-1pF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ji-v2-7lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

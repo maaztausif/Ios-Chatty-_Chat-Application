@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  GIDSignIn.sharedInstance().delegate = self
         
         
-        let dataBase = Database.database().reference()
-        dataBase.setValue(["hello","BOss"])
+//        let dataBase = Database.database().reference()
+//        dataBase.setValue(["hello","BOss"])
         
        // self.window?.rootViewController?.performSegue(withIdentifier: "goToChat", sender: self)
 

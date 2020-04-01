@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		54E2618AB2B626C6741A11F3 /* Pods_Chatty_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85D44E26A4035E4CABC39F4 /* Pods_Chatty_Chat.framework */; };
-		C555A254242E1BA20010639D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555A252242E1BA20010639D /* CustomTableViewCell.swift */; };
-		C555A255242E1BA20010639D /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C555A253242E1BA20010639D /* CustomTableViewCell.xib */; };
+		C55447652434045A0047673A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55447642434045A0047673A /* Message.swift */; };
+		C554476E243416A70047673A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554476C243416A70047673A /* CustomTableViewCell.swift */; };
+		C554476F243416A70047673A /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C554476D243416A70047673A /* CustomTableViewCell.xib */; };
 		C555A257242E1F9E0010639D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555A256242E1F9E0010639D /* RegisterViewController.swift */; };
 		C555A259242E1FC70010639D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555A258242E1FC70010639D /* LoginViewController.swift */; };
 		C555A25B242E1FEB0010639D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555A25A242E1FEB0010639D /* ChatViewController.swift */; };
@@ -25,8 +26,9 @@
 /* Begin PBXFileReference section */
 		277161CC26EDB72B650307F4 /* Pods-Chatty Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatty Chat.debug.xcconfig"; path = "Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		AB40A1A227E501E2C4EE0DE3 /* Pods-Chatty Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatty Chat.release.xcconfig"; path = "Target Support Files/Pods-Chatty Chat/Pods-Chatty Chat.release.xcconfig"; sourceTree = "<group>"; };
-		C555A252242E1BA20010639D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		C555A253242E1BA20010639D /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		C55447642434045A0047673A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C554476C243416A70047673A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C554476D243416A70047673A /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		C555A256242E1F9E0010639D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C555A258242E1FC70010639D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C555A25A242E1FEB0010639D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -71,11 +73,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C5544763243404350047673A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C55447642434045A0047673A /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C555A251242E1B520010639D /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				C555A252242E1BA20010639D /* CustomTableViewCell.swift */,
-				C555A253242E1BA20010639D /* CustomTableViewCell.xib */,
+				C554476C243416A70047673A /* CustomTableViewCell.swift */,
+				C554476D243416A70047673A /* CustomTableViewCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -101,6 +111,7 @@
 		C556A5F8242C3BBE006EFFF3 /* Chatty Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C5544763243404350047673A /* Model */,
 				C5652E7A242FB2FF00A47892 /* GoogleService-Info.plist */,
 				C556A608242C3BCA006EFFF3 /* Info.plist */,
 				C556A603242C3BCA006EFFF3 /* Assets.xcassets */,
@@ -203,9 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C556A607242C3BCA006EFFF3 /* LaunchScreen.storyboard in Resources */,
+				C554476F243416A70047673A /* CustomTableViewCell.xib in Resources */,
 				C556A604242C3BCA006EFFF3 /* Assets.xcassets in Resources */,
 				C5652E7B242FB2FF00A47892 /* GoogleService-Info.plist in Resources */,
-				C555A255242E1BA20010639D /* CustomTableViewCell.xib in Resources */,
 				C556A5FF242C3BBE006EFFF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,10 +289,11 @@
 			files = (
 				C555A259242E1FC70010639D /* LoginViewController.swift in Sources */,
 				C556A5FC242C3BBE006EFFF3 /* WellcomeViewController.swift in Sources */,
+				C554476E243416A70047673A /* CustomTableViewCell.swift in Sources */,
 				C555A257242E1F9E0010639D /* RegisterViewController.swift in Sources */,
 				C555A25B242E1FEB0010639D /* ChatViewController.swift in Sources */,
 				C556A5FA242C3BBE006EFFF3 /* AppDelegate.swift in Sources */,
-				C555A254242E1BA20010639D /* CustomTableViewCell.swift in Sources */,
+				C55447652434045A0047673A /* Message.swift in Sources */,
 				C556A602242C3BBE006EFFF3 /* Chatty_Chat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

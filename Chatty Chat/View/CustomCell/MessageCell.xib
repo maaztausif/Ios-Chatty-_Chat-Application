@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Chatty_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="CustomTableViewCell" customModule="Chatty_Chat" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="66.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-RR-L7P">
+                        <rect key="frame" x="99" y="7" width="232" height="52"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWy-pu-mHl">
+                                <rect key="frame" x="8" y="14" width="204" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccP-6l-57M">
+                                <rect key="frame" x="8" y="5" width="204" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29841692076473514" green="1" blue="0.5332878832275566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="232" id="hRQ-RN-YHr"/>
+                            <constraint firstAttribute="height" constant="52" id="qvd-6J-cPg"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9C4-Qd-wif">
+                        <rect key="frame" x="20" y="6" width="67" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="67" id="PLJ-aE-vgk"/>
+                            <constraint firstAttribute="height" constant="55" id="yLt-9f-MXP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Nut-RR-L7P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="68O-1h-c53"/>
+                    <constraint firstItem="Nut-RR-L7P" firstAttribute="leading" secondItem="9C4-Qd-wif" secondAttribute="trailing" constant="12" id="Abc-3A-h5v"/>
+                    <constraint firstItem="9C4-Qd-wif" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="QGm-1P-Rj4"/>
+                    <constraint firstAttribute="bottom" secondItem="9C4-Qd-wif" secondAttribute="bottom" constant="5.5" id="ZRS-BD-9xc"/>
+                    <constraint firstAttribute="bottom" secondItem="Nut-RR-L7P" secondAttribute="bottom" constant="7.5" id="yUA-QT-Wl7"/>
+                    <constraint firstItem="9C4-Qd-wif" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ydy-2F-w4z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="AvatarImageView" destination="9C4-Qd-wif" id="q9P-c7-NcD"/>
+                <outlet property="messageBody" destination="hWy-pu-mHl" id="PzN-7L-7AP"/>
+                <outlet property="messageView" destination="Nut-RR-L7P" id="Qb9-4u-iIM"/>
+                <outlet property="senderName" destination="ccP-6l-57M" id="ZuA-4X-CsF"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="144.30803571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
